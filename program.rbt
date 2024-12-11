@@ -1,0 +1,8 @@
+Boot Up
+  initial 0, 0
+  up 3
+  right 2
+  spin
+  how was your day?
+  flip a coin
+Power Down

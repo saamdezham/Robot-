@@ -1,0 +1,31 @@
+Program:
+  'Boot Up'
+    commands*=Command
+  'Power Down'
+  
+;
+Command:
+  InitialCommand | MoveCommand | SpeechCommand
+;
+InitialCommand:
+  'initial' x=INT ',' y=INT
+;
+MoveCommand:
+  direction=Direction (steps=INT)?
+;
+
+SpeechCommand:
+  command_text=Ask
+;
+
+Direction:
+  "up" | "down" | "left" | "right" | "upleft" | "upright" | "downleft" | "downright" | "spin"
+;
+
+Ask:
+  'what is your purpose?'|'how was your day?' | 'flip a coin'
+;
+
+Comment:
+  /\/\/.*$/
+;
